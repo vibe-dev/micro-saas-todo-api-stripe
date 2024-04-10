@@ -1,0 +1,26 @@
+GET http://localhost:3000/users HTTP/1.1
+
+###
+GET http://localhost:3000/users/ea003aa7-a137-4e21-bfd6-e8d1e9eb4961 HTTP/1.1
+
+###
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Jane Doe",
+    "email": "jane@doe.com"
+}
+
+###
+POST http://localhost:3000/todos HTTP/1.1
+content-type: application/json
+x-user-id: 542998ff-71ef-4482-9327-b3e30e7bc44d
+
+{
+    "title": "Task #9"
+}
+
+###
+POST http://localhost:3000/checkout HTTP/1.1
+x-user-id: 542998ff-71ef-4482-9327-b3e30e7bc44d
